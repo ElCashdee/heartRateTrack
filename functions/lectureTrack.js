@@ -19,6 +19,18 @@ var trackBtn = document.getElementById("trackBtn");
 	
 }());
 
+// Reference to Firebase DB.
+var database = firebase.database();
+
+function getRegisteredStudents() {
+    database.ref('studentHeartRate').set({
+        heartRate: 'heartRate',
+        studentNumber: 'studentNumber'
+    });
+
+}
+
 function trackHeartRate() {
     console.log("In trackHeartRate method");
+
 }
